@@ -1,0 +1,4 @@
+import { processSteps } from '@/data/home';
+export function Process() {
+  return <section className="process section-light" id="processo"><div className="section-rail"><div className="section-heading"><div><span className="eyebrow">04 / UM CAMINHO MAIS CLARO</span><h2>Da conversa ao <em>projeto.</em></h2></div><p>Cada etapa tem um propósito.<br />Você entende a proposta antes de seguir.</p></div><ol className="process-steps">{processSteps.map((step, i) => <li key={step.title}><span className="step-number">0{i + 1}</span><h3>{step.title}</h3><p>{step.description}</p></li>)}</ol></div></section>;
+}

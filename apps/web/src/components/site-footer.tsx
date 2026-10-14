@@ -1,0 +1,7 @@
+import { Link } from 'react-router';
+import { ArrowUpRight } from 'lucide-react';
+import { WhatsappAction } from '@/components/whatsapp-action';
+import { site } from '@/constants/site';
+export function SiteFooter() {
+  return <footer className="site-footer"><div className="section-rail"><div className="footer-top"><a href="/" className="brand"><span className="brand-crop"><img src={site.logoImage} width={512} height={512} loading="lazy" alt="Logotipo arquitetônico da BS Projetos" /></span><span><strong>BS PROJETOS</strong><small>BRYAN SALDANHA ARQUITETURA</small></span></a><p>Planejamento para a sua ideia.<br />Confiança para o próximo passo.</p><div className="footer-links"><a href="/#servicos">Serviços <ArrowUpRight size={15} /></a><a href="/#portfolio">Portfólio <ArrowUpRight size={15} /></a><a href="/#orcamento">Solicitar orçamento <ArrowUpRight size={15} /></a></div><div className="footer-contact"><WhatsappAction source="rodape" className="footer-whatsapp" /><span>Instagram: {site.instagram ? <a href={`https://instagram.com/${site.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer">{site.instagram}</a> : '[INSERIR INFORMAÇÃO]'}</span><span>E-mail: {site.email ? <a href={`mailto:${site.email}`}>{site.email}</a> : '[INSERIR INFORMAÇÃO]'}</span>{site.region && <span>{site.region}</span>}</div></div><div className="footer-bottom"><span>© 2026 BS Projetos | Bryan Saldanha Arquitetura</span><Link to="/privacidade">Política de privacidade</Link><span>ARQUITETURA COM PLANEJAMENTO.</span></div></div></footer>;
+}
